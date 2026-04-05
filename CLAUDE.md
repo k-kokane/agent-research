@@ -2,11 +2,17 @@
 
 ## Project Overview
 
-This is **agent-research**, a Next.js 16 web application built with React 19, TypeScript, and Tailwind CSS 4. It serves as a research/starter project scaffolded via `create-next-app`.
+This is **agent-research**, a Next.js 16 web application built with React 19, TypeScript, and Tailwind CSS 4. It is a research platform where an AI agent (Claude) investigates a given topic, implements the findings as code, and publishes the output as a deployed web application.
 
 ## Purpose
 
-A baseline Next.js application used for agent and AI-assisted development research. The project explores how AI coding agents interact with a modern Next.js codebase.
+This repository exists as a research delivery system:
+
+1. **Agent researches** — Claude is given a research topic and autonomously investigates it, gathering information and forming a structured report.
+2. **Agent publishes** — The findings are implemented as code within this Next.js app (e.g. as a page, data visualization, or written report rendered in the UI).
+3. **Admin reviews** — The admin accesses the live deployment to read and review the research report online, without needing to run the project locally.
+
+The goal is to allow asynchronous, agent-driven research delivery via a web interface.
 
 ## Stack
 
