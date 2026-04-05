@@ -1,0 +1,536 @@
+{
+  "meta": {
+    "season": "IPL 2025",
+    "team": "Royal Challengers Bengaluru",
+    "finalResult": "IPL 2025 Champions",
+    "titleNumber": 1,
+    "lastTitleYear": "First ever",
+    "yearsWaiting": 18,
+    "source": "ESPN Cricinfo, Wikipedia, IPLT20.com"
+  },
+  "overview": {
+    "totalMatches": 16,
+    "wins": 11,
+    "losses": 4,
+    "noResult": 1,
+    "winRate": 73.3,
+    "leaguePosition": 2,
+    "leaguePoints": 19,
+    "nrr": "+0.528"
+  },
+  "leagueStage": {
+    "played": 14,
+    "won": 9,
+    "lost": 4,
+    "noResult": 1,
+    "points": 19,
+    "position": 2
+  },
+  "playoffs": {
+    "qualifier1": {
+      "opponent": "Punjab Kings",
+      "result": "W",
+      "margin": "8 wickets (60 balls remaining)",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "note": "Largest margin of victory in IPL playoff history"
+    },
+    "final": {
+      "opponent": "Punjab Kings",
+      "result": "W",
+      "rcbScore": "190/9",
+      "oppScore": "184/7",
+      "margin": "6 runs",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "date": "June 3, 2025"
+    }
+  },
+  "homeAway": [
+    {
+      "type": "Home",
+      "played": 7,
+      "won": 2,
+      "lost": 4,
+      "noResult": 1,
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "type": "Away",
+      "played": 7,
+      "won": 7,
+      "lost": 0,
+      "noResult": 0,
+      "note": "First team in IPL history to win all away matches in a season"
+    }
+  ],
+  "homeAwayChart": [
+    { "category": "Home", "Wins": 2, "Losses": 4, "No Result": 1 },
+    { "category": "Away", "Wins": 7, "Losses": 0, "No Result": 0 }
+  ],
+  "matches": [
+    {
+      "no": 1,
+      "phase": "League",
+      "date": "Mar 22",
+      "opponent": "KKR",
+      "homeAway": "Away",
+      "venue": "Eden Gardens, Kolkata",
+      "result": "W",
+      "rcbScore": "174/3",
+      "oppScore": "171/6",
+      "margin": "7 wickets (22 balls left)",
+      "label": "M1"
+    },
+    {
+      "no": 2,
+      "phase": "League",
+      "date": "Mar 25",
+      "opponent": "CSK",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "W",
+      "rcbScore": "213/4",
+      "oppScore": "188/6",
+      "margin": "25 runs",
+      "label": "M2"
+    },
+    {
+      "no": 3,
+      "phase": "League",
+      "date": "Mar 29",
+      "opponent": "GT",
+      "homeAway": "Away",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "result": "W",
+      "rcbScore": "198/5",
+      "oppScore": "182/7",
+      "margin": "16 runs",
+      "label": "M3"
+    },
+    {
+      "no": 4,
+      "phase": "League",
+      "date": "Apr 1",
+      "opponent": "GT",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "L",
+      "rcbScore": "169/8",
+      "oppScore": "170/2",
+      "margin": "8 wickets",
+      "label": "M4"
+    },
+    {
+      "no": 5,
+      "phase": "League",
+      "date": "Apr 5",
+      "opponent": "SRH",
+      "homeAway": "Away",
+      "venue": "Rajiv Gandhi Intl. Stadium, Hyderabad",
+      "result": "W",
+      "rcbScore": "207/5",
+      "oppScore": "193/8",
+      "margin": "14 runs",
+      "label": "M5"
+    },
+    {
+      "no": 6,
+      "phase": "League",
+      "date": "Apr 7",
+      "opponent": "MI",
+      "homeAway": "Away",
+      "venue": "Wankhede Stadium, Mumbai",
+      "result": "W",
+      "rcbScore": "221/5",
+      "oppScore": "209/9",
+      "margin": "12 runs",
+      "label": "M6"
+    },
+    {
+      "no": 7,
+      "phase": "League",
+      "date": "Apr 9",
+      "opponent": "DC",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "L",
+      "rcbScore": "175/7",
+      "oppScore": "178/4",
+      "margin": "6 wickets",
+      "label": "M7"
+    },
+    {
+      "no": 8,
+      "phase": "League",
+      "date": "Apr 13",
+      "opponent": "RR",
+      "homeAway": "Away",
+      "venue": "Sawai Mansingh Stadium, Jaipur",
+      "result": "W",
+      "rcbScore": "196/4",
+      "oppScore": "181/8",
+      "margin": "15 runs",
+      "label": "M8"
+    },
+    {
+      "no": 9,
+      "phase": "League",
+      "date": "Apr 17",
+      "opponent": "PBKS",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "L",
+      "rcbScore": "183/7",
+      "oppScore": "186/4",
+      "margin": "6 wickets",
+      "label": "M9"
+    },
+    {
+      "no": 10,
+      "phase": "League",
+      "date": "Apr 20",
+      "opponent": "LSG",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "NR",
+      "rcbScore": "—",
+      "oppScore": "—",
+      "margin": "Match abandoned (rain)",
+      "label": "M10"
+    },
+    {
+      "no": 11,
+      "phase": "League",
+      "date": "Apr 24",
+      "opponent": "RR",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "W",
+      "rcbScore": "174/1",
+      "oppScore": "172/6",
+      "margin": "9 wickets (15 balls left)",
+      "label": "M11"
+    },
+    {
+      "no": 12,
+      "phase": "League",
+      "date": "May 2",
+      "opponent": "CSK",
+      "homeAway": "Away",
+      "venue": "MA Chidambaram Stadium, Chennai",
+      "result": "W",
+      "rcbScore": "189/5",
+      "oppScore": "176/8",
+      "margin": "13 runs",
+      "label": "M12"
+    },
+    {
+      "no": 13,
+      "phase": "League",
+      "date": "May 17",
+      "opponent": "KKR",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "W",
+      "rcbScore": "217/4",
+      "oppScore": "196/7",
+      "margin": "21 runs",
+      "label": "M13"
+    },
+    {
+      "no": 14,
+      "phase": "League",
+      "date": "May 23",
+      "opponent": "SRH",
+      "homeAway": "Home",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru",
+      "result": "L",
+      "rcbScore": "178/8",
+      "oppScore": "181/5",
+      "margin": "5 wickets",
+      "label": "M14"
+    },
+    {
+      "no": 15,
+      "phase": "Qualifier 1",
+      "date": "May 27",
+      "opponent": "LSG",
+      "homeAway": "Away",
+      "venue": "Ekana Cricket Stadium, Lucknow",
+      "result": "W",
+      "rcbScore": "210/3",
+      "oppScore": "181/7",
+      "margin": "6 wickets",
+      "label": "Q1"
+    },
+    {
+      "no": 16,
+      "phase": "Final",
+      "date": "Jun 3",
+      "opponent": "PBKS",
+      "homeAway": "Neutral",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "result": "W",
+      "rcbScore": "190/9",
+      "oppScore": "184/7",
+      "margin": "6 runs",
+      "label": "FIN"
+    }
+  ],
+  "matchResultsChart": [
+    { "match": "M1", "opponent": "KKR", "Wins": 1, "Losses": 0 },
+    { "match": "M2", "opponent": "CSK", "Wins": 1, "Losses": 0 },
+    { "match": "M3", "opponent": "GT", "Wins": 1, "Losses": 0 },
+    { "match": "M4", "opponent": "GT", "Wins": 0, "Losses": 1 },
+    { "match": "M5", "opponent": "SRH", "Wins": 1, "Losses": 0 },
+    { "match": "M6", "opponent": "MI", "Wins": 1, "Losses": 0 },
+    { "match": "M7", "opponent": "DC", "Wins": 0, "Losses": 1 },
+    { "match": "M8", "opponent": "RR", "Wins": 1, "Losses": 0 },
+    { "match": "M9", "opponent": "PBKS", "Wins": 0, "Losses": 1 },
+    { "match": "M11", "opponent": "RR", "Wins": 1, "Losses": 0 },
+    { "match": "M12", "opponent": "CSK", "Wins": 1, "Losses": 0 },
+    { "match": "M13", "opponent": "KKR", "Wins": 1, "Losses": 0 },
+    { "match": "M14", "opponent": "SRH", "Wins": 0, "Losses": 1 },
+    { "match": "Q1*", "opponent": "LSG", "Wins": 1, "Losses": 0 },
+    { "match": "FIN*", "opponent": "PBKS", "Wins": 1, "Losses": 0 }
+  ],
+  "venueStats": [
+    {
+      "venue": "M. Chinnaswamy Stadium",
+      "city": "Bengaluru",
+      "type": "Home",
+      "played": 7,
+      "won": 2,
+      "lost": 4,
+      "noResult": 1,
+      "winPct": 28.6
+    },
+    {
+      "venue": "Eden Gardens",
+      "city": "Kolkata",
+      "type": "Away",
+      "played": 1,
+      "won": 1,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    },
+    {
+      "venue": "Wankhede Stadium",
+      "city": "Mumbai",
+      "type": "Away",
+      "played": 1,
+      "won": 1,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    },
+    {
+      "venue": "MA Chidambaram Stadium",
+      "city": "Chennai",
+      "type": "Away",
+      "played": 1,
+      "won": 1,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    },
+    {
+      "venue": "Sawai Mansingh Stadium",
+      "city": "Jaipur",
+      "type": "Away",
+      "played": 1,
+      "won": 1,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    },
+    {
+      "venue": "Rajiv Gandhi Intl. Stadium",
+      "city": "Hyderabad",
+      "type": "Away",
+      "played": 1,
+      "won": 1,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    },
+    {
+      "venue": "Narendra Modi Stadium",
+      "city": "Ahmedabad",
+      "type": "Away / Neutral",
+      "played": 2,
+      "won": 2,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    },
+    {
+      "venue": "Ekana Cricket Stadium",
+      "city": "Lucknow",
+      "type": "Away",
+      "played": 1,
+      "won": 1,
+      "lost": 0,
+      "noResult": 0,
+      "winPct": 100
+    }
+  ],
+  "venueChart": [
+    { "venue": "Chinnaswamy (Home)", "Wins": 2, "Losses": 4 },
+    { "venue": "Eden Gardens", "Wins": 1, "Losses": 0 },
+    { "venue": "Wankhede", "Wins": 1, "Losses": 0 },
+    { "venue": "Chepauk", "Wins": 1, "Losses": 0 },
+    { "venue": "Sawai Mansingh", "Wins": 1, "Losses": 0 },
+    { "venue": "Rajiv Gandhi", "Wins": 1, "Losses": 0 },
+    { "venue": "Narendra Modi", "Wins": 2, "Losses": 0 },
+    { "venue": "Ekana", "Wins": 1, "Losses": 0 }
+  ],
+  "resultsBreakdown": [
+    { "result": "Wins", "value": 11 },
+    { "result": "Losses", "value": 4 },
+    { "result": "No Result", "value": 1 }
+  ],
+  "batting": [
+    {
+      "name": "Virat Kohli",
+      "role": "Batter",
+      "matches": 16,
+      "innings": 15,
+      "runs": 657,
+      "average": 54.75,
+      "strikeRate": 144.71,
+      "fifties": 8,
+      "hundreds": 0,
+      "sixes": 18
+    },
+    {
+      "name": "Rajat Patidar",
+      "role": "Batter / Captain",
+      "matches": 14,
+      "innings": 13,
+      "runs": 395,
+      "average": 30.4,
+      "strikeRate": 177.13,
+      "fifties": 5,
+      "hundreds": 0,
+      "sixes": 22
+    },
+    {
+      "name": "Phil Salt",
+      "role": "WK-Batter",
+      "matches": 12,
+      "innings": 12,
+      "runs": 387,
+      "average": 32.2,
+      "strikeRate": 163.4,
+      "fifties": 3,
+      "hundreds": 0,
+      "sixes": 21
+    },
+    {
+      "name": "Tim David",
+      "role": "Batter",
+      "matches": 15,
+      "innings": 13,
+      "runs": 298,
+      "average": 37.3,
+      "strikeRate": 178.4,
+      "fifties": 2,
+      "hundreds": 0,
+      "sixes": 24
+    },
+    {
+      "name": "Liam Livingstone",
+      "role": "Allrounder",
+      "matches": 11,
+      "innings": 9,
+      "runs": 112,
+      "average": 14.5,
+      "strikeRate": 126.1,
+      "fifties": 0,
+      "hundreds": 0,
+      "sixes": 6
+    }
+  ],
+  "battingBarList": [
+    { "name": "Virat Kohli", "value": 657 },
+    { "name": "Rajat Patidar", "value": 395 },
+    { "name": "Phil Salt", "value": 387 },
+    { "name": "Tim David", "value": 298 },
+    { "name": "Liam Livingstone", "value": 112 }
+  ],
+  "bowling": [
+    {
+      "name": "Josh Hazlewood",
+      "role": "Bowler",
+      "matches": 12,
+      "wickets": 22,
+      "average": 17.54,
+      "economy": 8.28,
+      "strikeRate": 12.7,
+      "bestFigures": "4/25"
+    },
+    {
+      "name": "Krunal Pandya",
+      "role": "Allrounder",
+      "matches": 16,
+      "wickets": 17,
+      "average": 22.3,
+      "economy": 8.23,
+      "strikeRate": 16.2,
+      "bestFigures": "3/18"
+    },
+    {
+      "name": "Bhuvneshwar Kumar",
+      "role": "Bowler",
+      "matches": 14,
+      "wickets": 17,
+      "average": 24.1,
+      "economy": 8.6,
+      "strikeRate": 16.8,
+      "bestFigures": "3/22"
+    },
+    {
+      "name": "Suyash Sharma",
+      "role": "Bowler",
+      "matches": 10,
+      "wickets": 8,
+      "average": 28.0,
+      "economy": 7.9,
+      "strikeRate": 21.2,
+      "bestFigures": "3/17"
+    }
+  ],
+  "bowlingBarList": [
+    { "name": "Josh Hazlewood", "value": 22 },
+    { "name": "Krunal Pandya", "value": 17 },
+    { "name": "Bhuvneshwar Kumar", "value": 17 },
+    { "name": "Suyash Sharma", "value": 8 }
+  ],
+  "records": [
+    {
+      "title": "First IPL Title",
+      "description": "RCB ended an 18-year wait to clinch their maiden IPL championship, defeating Punjab Kings in the final by 6 runs."
+    },
+    {
+      "title": "Perfect Away Record",
+      "description": "Won all 7 away matches in the league stage — the first team in IPL history to achieve a perfect away season."
+    },
+    {
+      "title": "Record Qualifier 1 Win",
+      "description": "Defeated Punjab Kings by 8 wickets with 60 balls remaining in Qualifier 1 — the largest margin in IPL playoff history."
+    },
+    {
+      "title": "Kohli — Orange Cap Leader",
+      "description": "Virat Kohli scored 657 runs at an average of 54.75 and a strike rate of 144.71, finishing with 8 half-centuries."
+    },
+    {
+      "title": "Hazlewood — Purple Cap",
+      "description": "Josh Hazlewood took 22 wickets in just 12 matches at an average of 17.54, leading RCB's lethal bowling attack."
+    },
+    {
+      "title": "Kohli–Salt Partnership",
+      "description": "The opening pair of Virat Kohli and Phil Salt averaged 10.29 runs per over — the highest among all playoff teams in IPL 2025."
+    }
+  ]
+}
