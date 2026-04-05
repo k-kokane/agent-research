@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# environment files
+.env*
+!.env.example
+
+# misc
+.DS_Store
+*.pem
+next-env.d.ts
+tsconfig.tsbuildinfo
