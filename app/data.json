@@ -1,0 +1,14 @@
+{
+  "researches": [
+    {
+      "id": "rcb-stats-2025",
+      "title": "RCB IPL 2025 Season Stats",
+      "description": "Full season analysis of Royal Challengers Bengaluru's historic IPL 2025 title-winning campaign — match results, home/away breakdown, venue performance, batting and bowling highlights.",
+      "date": "2026-04-06",
+      "tags": ["Cricket", "IPL 2025", "RCB", "Sports Stats", "Data Viz"],
+      "trigger": "manual",
+      "route": "/rcb-stats-2025",
+      "result": "RCB won IPL 2025 — first title in 18 years"
+    }
+  ]
+}
