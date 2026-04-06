@@ -10,10 +10,10 @@ const triggerLabel = (trigger: string) =>
 
 export default function Home() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-10">
+    <main className="max-w-4xl mx-auto px-4 py-8 sm:py-10">
       {/* Page header */}
-      <div className="mb-8">
-        <Title className="text-2xl">Research Hub</Title>
+      <div className="mb-6 sm:mb-8">
+        <Title className="text-xl sm:text-2xl">Research Hub</Title>
         <Text className="mt-1">
           Agent-driven research reports — each topic is autonomously
           investigated and published as an interactive page.
@@ -23,60 +23,54 @@ export default function Home() {
       <Divider />
 
       {/* Research list */}
-      <div className="mt-8 space-y-4">
+      <div className="mt-6 sm:mt-8 space-y-4">
         {data.researches.map((r) => (
-          <Card key={r.id}>
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-              {/* Left: content */}
-              <div className="flex-1 min-w-0">
-                {/* Tags + trigger */}
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <Badge color={triggerColor(r.trigger)} size="xs">
-                    {triggerLabel(r.trigger)}
-                  </Badge>
-                  {r.tags.map((tag) => (
-                    <Badge key={tag} color="gray" size="xs">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
+          <Card key={r.id} className="p-4 sm:p-6">
+            {/* Tags + trigger row */}
+            <div className="flex flex-wrap items-center gap-1.5 mb-3">
+              <Badge color={triggerColor(r.trigger)} size="xs">
+                {triggerLabel(r.trigger)}
+              </Badge>
+              {r.tags.map((tag) => (
+                <Badge key={tag} color="gray" size="xs">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
 
-                {/* Title */}
-                <Title>{r.title}</Title>
+            {/* Title + date row */}
+            <div className="flex items-start justify-between gap-3">
+              <Title className="text-base sm:text-lg leading-snug">{r.title}</Title>
+              <Text className="text-xs text-tremor-content-subtle shrink-0 pt-0.5">
+                {new Date(r.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </Text>
+            </div>
 
-                {/* Description */}
-                <Text className="mt-1 line-clamp-2">{r.description}</Text>
+            {/* Description */}
+            <Text className="mt-1.5 line-clamp-2 text-sm">{r.description}</Text>
 
-                {/* Result */}
-                {r.result && (
-                  <Text className="mt-2 text-tremor-content-emphasis font-medium">
-                    {r.result}
-                  </Text>
-                )}
-              </div>
-
-              {/* Right: date + CTA */}
-              <div className="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                <Text className="text-tremor-content-subtle text-xs whitespace-nowrap">
-                  {new Date(r.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
+            {/* Result + CTA row */}
+            <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              {r.result && (
+                <Text className="text-tremor-content-emphasis font-medium text-sm">
+                  {r.result}
                 </Text>
-                <Link
-                  href={r.route}
-                  className="inline-flex items-center gap-1.5 rounded-tremor-default bg-tremor-brand px-3 py-1.5 text-sm font-medium text-tremor-brand-inverted shadow-tremor-input hover:bg-tremor-brand-emphasis transition-colors"
-                >
-                  Show Details →
-                </Link>
-              </div>
+              )}
+              <Link
+                href={r.route}
+                className="inline-flex items-center justify-center gap-1.5 rounded-tremor-default bg-tremor-brand px-4 py-2 text-sm font-medium text-tremor-brand-inverted shadow-tremor-input hover:bg-tremor-brand-emphasis transition-colors w-full sm:w-auto"
+              >
+                Show Details →
+              </Link>
             </div>
           </Card>
         ))}
       </div>
 
-      {/* Empty state (only shown when list is empty, kept for future) */}
       {data.researches.length === 0 && (
         <div className="mt-16 text-center">
           <Title>No research yet</Title>
