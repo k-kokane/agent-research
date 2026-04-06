@@ -1,6 +1,22 @@
 @import "tailwindcss";
 @source "../node_modules/@tremor/react/dist";
 
+/* Force-generate Tremor chart color classes.
+   Tremor builds these via string concatenation so Tailwind's scanner
+   never sees them as static class names — they must be listed explicitly. */
+@source inline("fill-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("stroke-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("bg-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("text-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("border-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("ring-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("hover:bg-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("dark:bg-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("dark:fill-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("dark:stroke-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("dark:text-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("dark:border-{blue,cyan,sky,indigo,violet,purple,fuchsia,slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}");
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
