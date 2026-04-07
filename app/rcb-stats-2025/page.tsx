@@ -19,21 +19,25 @@ import {
 } from "@tremor/react"
 import data from "./data.json"
 
-// ── KPI card ──────────────────────────────────────────────────────────────────
+// ── KPI card — matches Tremor blocks KPI Card 2 pattern ──────────────────────
 function KpiCard({
   title,
   value,
-  sub,
+  badge,
+  badgeColor = "blue",
 }: {
   title: string
   value: string | number
-  sub: string
+  badge: string
+  badgeColor?: string
 }) {
   return (
-    <Card className="p-4 sm:p-6">
-      <Text className="text-xs sm:text-sm">{title}</Text>
-      <Metric className="mt-1 text-xl sm:text-3xl">{value}</Metric>
-      <Text className="mt-1 text-xs leading-tight">{sub}</Text>
+    <Card>
+      <div className="flex items-center justify-between gap-2">
+        <Text>{title}</Text>
+        <Badge color={badgeColor} size="xs">{badge}</Badge>
+      </div>
+      <Metric className="mt-2">{value}</Metric>
     </Card>
   )
 }
@@ -77,19 +81,17 @@ export default function RCBStatsPage() {
 
       <Divider />
 
-      {/* KPI Cards — 2 cols on all screens, tighter on mobile */}
+      {/* KPI Cards — single col mobile, 2 col tablet, 4 col desktop */}
       <Section title="Season at a Glance">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <KpiCard title="Matches Played" value={data.overview.totalMatches} sub="League + Playoffs" />
-          <KpiCard title="Wins" value={data.overview.wins} sub="9 league · 2 playoffs" />
-          <KpiCard title="Losses" value={data.overview.losses} sub="All in league stage" />
-          <KpiCard title="Win Rate" value={`${data.overview.winRate}%`} sub="11 of 15 completed" />
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-3 sm:mt-4">
-          <KpiCard title="League Points" value={data.overview.leaguePoints} sub={`2nd · NRR ${data.overview.nrr}`} />
-          <KpiCard title="League Position" value={`#${data.overview.leaguePosition}`} sub="9W · 4L · 1NR" />
-          <KpiCard title="Away Record" value="7 / 7" sub="IPL record — all away won" />
-          <KpiCard title="Final Margin" value="6 runs" sub="RCB 190/9 vs PBKS 184/7" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <KpiCard title="Matches Played" value={data.overview.totalMatches} badge="League + Playoffs" badgeColor="blue" />
+          <KpiCard title="Wins" value={data.overview.wins} badge="9 league · 2 playoffs" badgeColor="emerald" />
+          <KpiCard title="Losses" value={data.overview.losses} badge="League stage only" badgeColor="rose" />
+          <KpiCard title="Win Rate" value={`${data.overview.winRate}%`} badge="11 of 15" badgeColor="emerald" />
+          <KpiCard title="League Points" value={data.overview.leaguePoints} badge={`NRR ${data.overview.nrr}`} badgeColor="blue" />
+          <KpiCard title="League Position" value={`#${data.overview.leaguePosition}`} badge="9W · 4L · 1NR" badgeColor="blue" />
+          <KpiCard title="Away Record" value="7 / 7" badge="IPL record" badgeColor="emerald" />
+          <KpiCard title="Final Margin" value="6 runs" badge="vs Punjab Kings" badgeColor="blue" />
         </div>
       </Section>
 
