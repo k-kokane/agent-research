@@ -19,24 +19,11 @@ import {
 } from "@tremor/react"
 import data from "./data.json"
 
-// ── KPI card — matches Tremor blocks KPI Card 2 pattern ──────────────────────
-function KpiCard({
-  title,
-  value,
-  badge,
-  badgeColor = "blue",
-}: {
-  title: string
-  value: string | number
-  badge: string
-  badgeColor?: string
-}) {
+// ── KPI card — clean Tremor default styles, no color overrides ────────────────
+function KpiCard({ title, value }: { title: string; value: string | number }) {
   return (
     <Card>
-      <div className="flex items-center justify-between gap-2">
-        <Text>{title}</Text>
-        <Badge color={badgeColor} size="xs">{badge}</Badge>
-      </div>
+      <Text>{title}</Text>
       <Metric className="mt-2">{value}</Metric>
     </Card>
   )
@@ -81,17 +68,17 @@ export default function RCBStatsPage() {
 
       <Divider />
 
-      {/* KPI Cards — single col mobile, 2 col tablet, 4 col desktop */}
+      {/* KPI Cards — 2 cols on mobile, 4 on desktop */}
       <Section title="Season at a Glance">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <KpiCard title="Matches Played" value={data.overview.totalMatches} badge="League + Playoffs" badgeColor="blue" />
-          <KpiCard title="Wins" value={data.overview.wins} badge="9 league · 2 playoffs" badgeColor="emerald" />
-          <KpiCard title="Losses" value={data.overview.losses} badge="League stage only" badgeColor="rose" />
-          <KpiCard title="Win Rate" value={`${data.overview.winRate}%`} badge="11 of 15" badgeColor="emerald" />
-          <KpiCard title="League Points" value={data.overview.leaguePoints} badge={`NRR ${data.overview.nrr}`} badgeColor="blue" />
-          <KpiCard title="League Position" value={`#${data.overview.leaguePosition}`} badge="9W · 4L · 1NR" badgeColor="blue" />
-          <KpiCard title="Away Record" value="7 / 7" badge="IPL record" badgeColor="emerald" />
-          <KpiCard title="Final Margin" value="6 runs" badge="vs Punjab Kings" badgeColor="blue" />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <KpiCard title="Matches Played" value={data.overview.totalMatches} />
+          <KpiCard title="Wins" value={data.overview.wins} />
+          <KpiCard title="Losses" value={data.overview.losses} />
+          <KpiCard title="Win Rate" value={`${data.overview.winRate}%`} />
+          <KpiCard title="League Points" value={data.overview.leaguePoints} />
+          <KpiCard title="League Position" value={`#${data.overview.leaguePosition}`} />
+          <KpiCard title="Away Record" value="7 / 7" />
+          <KpiCard title="Final Margin" value="6 runs" />
         </div>
       </Section>
 
