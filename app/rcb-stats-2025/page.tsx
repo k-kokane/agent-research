@@ -67,7 +67,7 @@ export default function RCBStatsPage() {
 
       {/* KPI Cards — 2 cols on mobile, 4 on desktop */}
       <Section title="Season at a Glance">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard title="Matches Played" value={data.overview.totalMatches} />
           <KpiCard title="Wins" value={data.overview.wins} />
           <KpiCard title="Losses" value={data.overview.losses} />
