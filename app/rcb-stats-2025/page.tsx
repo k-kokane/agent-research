@@ -19,7 +19,7 @@ import {
 } from "@tremor/react"
 import data from "./data.json"
 
-// ── KPI card — clean Tremor default styles, no color overrides ────────────────
+// ── KPI card ──────────────────────────────────────────────────────────────────
 function KpiCard({ title, value }: { title: string; value: string | number }) {
   return (
     <Card>
@@ -40,9 +40,6 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-const resultColor = (r: string) =>
-  r === "W" ? "emerald" : r === "L" ? "red" : "gray"
-
 const resultLabel = (r: string) =>
   r === "W" ? "Win" : r === "L" ? "Loss" : "N/R"
 
@@ -54,7 +51,7 @@ export default function RCBStatsPage() {
       {/* Header */}
       <div>
         <div className="flex flex-wrap items-center gap-2 mb-2">
-          <Badge color="emerald" size="lg">IPL 2025 Champions</Badge>
+          <Badge color="blue" size="lg">IPL 2025 Champions</Badge>
           <Badge color="blue">First title · 18 years in the making</Badge>
         </div>
         <h1 className="text-xl sm:text-2xl font-bold text-tremor-content-strong">
@@ -92,7 +89,6 @@ export default function RCBStatsPage() {
               data={data.resultsBreakdown}
               category="value"
               index="result"
-              colors={["emerald", "rose", "gray"]}
               className="h-40 sm:h-44 mt-4"
               label={`${data.overview.wins} Wins`}
               showLabel
@@ -109,7 +105,6 @@ export default function RCBStatsPage() {
               data={data.homeAwayChart}
               index="category"
               categories={["Wins", "Losses", "No Result"]}
-              colors={["emerald", "rose", "gray"]}
               stack
               className="h-36 sm:h-40 mt-4"
               showLegend
@@ -129,7 +124,6 @@ export default function RCBStatsPage() {
             data={data.venueChart}
             index="venue"
             categories={["Wins", "Losses"]}
-            colors={["emerald", "rose"]}
             stack
             className="h-56 sm:h-64"
             showLegend
@@ -149,7 +143,6 @@ export default function RCBStatsPage() {
               data={data.matchResultsChart}
               index="match"
               categories={["Wins", "Losses"]}
-              colors={["emerald", "rose"]}
               stack
               showLegend={false}
               showYAxis={false}
@@ -160,7 +153,7 @@ export default function RCBStatsPage() {
 
           <Card>
             <Title>Win Sequence</Title>
-            <Text className="text-sm mb-3">Tap tiles for match details</Text>
+            <Text className="text-sm mb-3">League + playoffs results</Text>
             <div className="flex flex-wrap gap-1.5">
               {data.matches.map((m) => (
                 <div
@@ -169,10 +162,10 @@ export default function RCBStatsPage() {
                   className={[
                     "h-8 w-8 rounded text-xs font-semibold flex items-center justify-center cursor-default select-none",
                     m.result === "W"
-                      ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200"
+                      ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200"
                       : m.result === "L"
-                        ? "bg-rose-50 text-rose-700 ring-1 ring-rose-200"
-                        : "bg-gray-100 text-gray-500 ring-1 ring-gray-200",
+                        ? "bg-slate-100 text-slate-500 ring-1 ring-slate-200"
+                        : "bg-gray-100 text-gray-400 ring-1 ring-gray-200",
                   ].join(" ")}
                 >
                   {m.result === "NR" ? "NR" : m.result}
@@ -181,11 +174,11 @@ export default function RCBStatsPage() {
             </div>
             <div className="flex gap-4 mt-3">
               <Text className="text-xs flex items-center gap-1">
-                <span className="inline-block w-3 h-3 rounded bg-emerald-50 ring-1 ring-emerald-200" />
+                <span className="inline-block w-3 h-3 rounded bg-blue-50 ring-1 ring-blue-200" />
                 Win
               </Text>
               <Text className="text-xs flex items-center gap-1">
-                <span className="inline-block w-3 h-3 rounded bg-rose-50 ring-1 ring-rose-200" />
+                <span className="inline-block w-3 h-3 rounded bg-slate-100 ring-1 ring-slate-200" />
                 Loss
               </Text>
               <Text className="text-xs flex items-center gap-1">
@@ -231,7 +224,7 @@ export default function RCBStatsPage() {
                     <TableCell className="text-xs whitespace-nowrap">{m.oppScore}</TableCell>
                     <TableCell className="text-xs whitespace-nowrap">{m.margin}</TableCell>
                     <TableCell>
-                      <Badge color={resultColor(m.result)} size="xs">
+                      <Badge color={m.result === "W" ? "blue" : "gray"} size="xs">
                         {resultLabel(m.result)}
                       </Badge>
                     </TableCell>
@@ -324,8 +317,8 @@ export default function RCBStatsPage() {
       <Section title="Notable Records &amp; Milestones">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {data.records.map((r) => (
-            <Card key={r.title} className="p-4 sm:p-6">
-              <Badge color="emerald" className="mb-2">Record</Badge>
+            <Card key={r.title}>
+              <Badge>Record</Badge>
               <Title className="mt-2 text-sm sm:text-base">{r.title}</Title>
               <Text className="mt-1 text-xs sm:text-sm">{r.description}</Text>
             </Card>
