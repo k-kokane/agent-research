@@ -46,7 +46,7 @@ const resultLabel = (r: string) =>
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default function RCBStatsPage() {
   return (
-    <main className="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-10 space-y-8 sm:space-y-10">
+    <main className="max-w-6xl mx-auto min-w-0 w-full px-3 sm:px-4 py-8 sm:py-10 space-y-8 sm:space-y-10">
 
       {/* Header */}
       <div>

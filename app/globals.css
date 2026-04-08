@@ -114,3 +114,11 @@ body {
   @apply antialiased bg-tremor-background-muted text-tremor-content-strong;
 }
 
+/* Prevent any wide content (tables, charts) from expanding the layout
+   viewport beyond the device width, which would stretch all w-full
+   elements (cards, grids) to match the overflowed width. */
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
