@@ -10,7 +10,7 @@ const triggerLabel = (trigger: string) =>
 
 export default function Home() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8 sm:py-10">
+    <main className="max-w-4xl mx-auto min-w-0 w-full px-4 py-8 sm:py-10">
       {/* Page header */}
       <div className="mb-6 sm:mb-8">
         <Title className="text-xl sm:text-2xl">Research Hub</Title>
