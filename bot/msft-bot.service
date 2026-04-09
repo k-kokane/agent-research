@@ -1,0 +1,29 @@
+# systemd service unit for the MSFT Research Telegram Bot
+#
+# Install:
+#   1. Edit the User, WorkingDirectory, and ExecStart paths below.
+#   2. sudo cp msft-bot.service /etc/systemd/system/
+#   3. sudo systemctl daemon-reload
+#   4. sudo systemctl enable --now msft-bot
+#
+# Logs:
+#   journalctl -u msft-bot -f
+
+[Unit]
+Description=MSFT Research Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Replace with the user that owns the bot files (do NOT run as root)
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/agent-research/bot
+# Loads .env automatically via python-dotenv; adjust python path if using a venv:
+#   ExecStart=/path/to/agent-research/bot/.venv/bin/python msft_bot.py
+ExecStart=/usr/bin/python3 /path/to/agent-research/bot/msft_bot.py
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
